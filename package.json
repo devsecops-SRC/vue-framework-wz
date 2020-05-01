@@ -10,14 +10,16 @@
     "build:prod": "cross-env NODE_ENV=production node build/build.js",
     "build:sit": "cross-env NODE_ENV=sit node build/build.js",
     "build:sit-preview": "cross-env NODE_ENV=sit npm_config_preview=true  npm_config_report=true node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "async-validator": "^1.7.1",
     "axios": "0.16.2",
     "deepmerge": "^1.5.0",
     "iview": "^2.3.0",
-    "jquery": "3.1.1",
+    "jquery": "3.5.0",
     "js-cookie": "2.1.4",
     "mavon-editor": "^2.2.4",
     "mockjs": "1.0.1-beta3",
@@ -29,7 +31,8 @@
     "vue-json-tree-view": "^2.0.7",
     "vue-router": "2.5.3",
     "vue-tinymce": "github:lpreterite/vue-tinymce",
-    "vuex": "2.3.1"
+    "vuex": "2.3.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "commander": "^2.11.0",
@@ -89,5 +92,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "snyk": true
 }
