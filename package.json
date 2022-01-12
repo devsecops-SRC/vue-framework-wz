@@ -13,7 +13,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "async-validator": "^1.7.1",
+    "async-validator": "^4.0.4",
     "axios": "0.16.2",
     "deepmerge": "^1.5.0",
     "iview": "^2.3.0",
